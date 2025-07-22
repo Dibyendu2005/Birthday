@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Fireworks</title>
+  <link rel="stylesheet" href="1.css" />
+  <style>
+    body {
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, sans-serif;
+    }
+
+    #cutCakeBtn {
+      display: none;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5em;
+      padding: 15px 30px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.5);
+      transition: transform 0.3s ease;
+      z-index: 10;
+    }
+
+    #cutCakeBtn:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    #playBtn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 20;
+      background: #ff4081;
+      color: white;
+      border: none;
+      font-size: 1.5em;
+      padding: 15px 25px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.1); }
+      100% { transform: translate(-50%, -50%) scale(1); }
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    p {
+      margin: 0;
+      position: absolute;
+      font: 16px Verdana;
+      color: #eee;
+      height: 25px;
+      top: calc(100vh - 30px);
+      text-shadow: 0 0 2px white;
+    }
+
+    p a {
+      text-decoration: none;
+      color: #aaa;
+    }
+
+    span {
+      font-size: 11px;
+    }
+
+    p > a:first-of-type {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="c"></canvas>
+
+  <audio id="bgMusic" src="/animation.mp3" loop></audio>
+
+  <button id="playBtn">Let's Celebrate Your Birthday </button>
+  <button id="cutCakeBtn">🎂 Cut the Cake</button>
+
+  <script src="1.js"></script>
+  <script>
+    const playBtn = document.getElementById('playBtn');
+    const bgMusic = document.getElementById('bgMusic');
+
+    playBtn.addEventListener('click', () => {
+      bgMusic.play();
+      playBtn.style.display = 'none';
+    });
+
+    // Show "Cut the Cake" button after 11 seconds
+    setTimeout(() => {
+      document.getElementById('cutCakeBtn').style.display = 'block';
+    }, 11000);
+
+    // Redirect on cake cut
+    document.getElementById('cutCakeBtn').addEventListener('click', () => {
+      window.location.href = "../cake/HappyBirthday.html"; // Change path as needed
+    });
+  </script>
+</body>
+</html>

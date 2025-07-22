@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="Happy Birthday_files/bootstrap.css">
+  <link rel="stylesheet" href="Happy Birthday_files/style.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: rgba(255, 129, 150, 0.795);
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    #musicOverlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #musicOverlay button {
+      font-size: 2rem;
+      padding: 20px 40px;
+      border: none;
+      border-radius: 20px;
+      background: #ff4081;
+      color: white;
+      box-shadow: 0 0 20px rgba(255, 64, 129, 0.6);
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #musicOverlay button:hover {
+      background: #e73370;
+    }
+
+    #nextPageBtn {
+      opacity: 0;
+      display: none;
+      transition: opacity 1s ease-in-out;
+      font-size: 1.5rem;
+      padding: 10px 20px;
+      border-radius: 12px;
+    }
+
+    #nextPageBtn.show {
+      display: inline-block;
+      opacity: 1;
+    }
+
+    .typed-cursor {
+      opacity: 1;
+      animation: typedjsBlink 0.7s infinite;
+    }
+
+    @keyframes typedjsBlink {
+      50% { opacity: 0.0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Play Music Overlay -->
+  <div id="musicOverlay">
+    <button onclick="startMusic()">Please Click Here</button>
+  </div>
+
+  <!-- Music -->
+  <audio id="birthdaySong" loop>
+    <source src="/cake.mp3" type="audio/mpeg">
+    Your browser doesn't support audio.
+  </audio>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti" width="438" height="726"></canvas>
+
+  <!-- Main Content -->
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-12 col-xl-6 mx-auto">
+        <img src="Happy%20Birthday_files/banner.png" alt="Happy Birthday Banner" class="img-fluid">
+      </div>
+
+      <div class="col-12 text-center">
+        <div id="name" class="area"></div>
+      </div>
+
+      <div class="col-12 text-center">
+        <div class="type-wrap">
+          <div id="typed-strings" class="typing" style="display: none;">
+            <h2>Happy Birthday <i id="nae"></i></h2>
+            <h2>Have a wonderful day</h2>
+            <h2>Filled with joy and happiness.</h2>
+          </div>
+          <span id="typed" style="white-space:pre;">Happy Birthday <i id="nae"></i></span><span class="typed-cursor">|</span>
+        </div>
+      </div>
+
+      <div class="col-12 col-xl-6 mx-auto">
+        <img src="img/cake.gif" alt="Birthday Cake" class="img-fluid">
+      </div>
+
+      <div class="col-12 text-center mt-4">
+        <button id="nextPageBtn" class="btn btn-danger">🎉 Open Card 🎉</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="Happy Birthday_files/jquery.js"></script>
+  <script src="Happy Birthday_files/typed.js"></script>
+  <script src="Happy Birthday_files/snowflakes.js"></script>
+  <script src="Happy Birthday_files/script.js"></script>
+
+  <script>
+    // Fade in page
+    window.addEventListener("load", () => {
+      document.body.style.opacity = "1";
+    });
+
+    // Show "Open Card" button after 1s
+    setTimeout(() => {
+      document.getElementById("nextPageBtn").classList.add("show");
+    }, 1000);
+
+    // Auto scroll to bottom after 3s
+    setTimeout(() => {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
+    }, 3000);
+
+    // Redirect to next page
+    document.getElementById("nextPageBtn").addEventListener("click", function () {
+      document.body.style.transition = "opacity 1s ease-in-out";
+      document.body.style.opacity = "0";
+      setTimeout(() => {
+        window.location.href = "../card/index.html"; // Change this path if needed
+      }, 3000);
+    });
+
+    // Confetti start
+    confetti.start();
+
+    // Music Play Function
+    function startMusic() {
+      const audio = document.getElementById("birthdaySong");
+      audio.play().then(() => {
+        document.getElementById("musicOverlay").style.display = "none";
+      }).catch(() => {
+        alert("Please tap the button to enable music.");
+      });
+    }
+  </script>
+</body>
+</html>
