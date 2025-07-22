@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #2a7aca;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #144884;
+}
+
+#textMessage {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Fade in/out classes */
+.fade-in {
+  opacity: 1 !important;
+}
+
+.fade-out {
+  opacity: 0 !important;
+}
+
