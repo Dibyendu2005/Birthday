@@ -61,6 +61,6 @@ button.addEventListener('click', () => {
   }, 7500);
 
   setTimeout(() => {
-    window.location.href = "../photo slider/index.html";
+    window.location.href = "photo slider/index.html";
   }, 7500);
 });
