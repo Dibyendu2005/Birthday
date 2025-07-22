@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" src="/Dilijit 2.mp3" autoplay loop></audio>
+
+  <div class="card">
+    <div class="back"></div>
+    <div class="front">
+      <div class="imgset">
+        <img width="100%" src="https://1.bp.blogspot.com/-Mgj9-rbs65E/XfMoPSD5gtI/AAAAAAAAURk/NBokE2gSS2cTSJ2em5lZ5hJDuTtRN7UVwCLcBGAsYHQ/s1600/2713997.png">
+      </div>
+    </div>
+    <div class="text-container">
+      <p id="head">Happy Birthday To MOON DIDI!</p>
+      <p>Thank you for always being my guiding star, role model, and best friend.</p>
+      <p>I hope your special day will bring you lots of happiness, love, and fun. You deserve them a lot. Enjoy!</p>
+      <p></p>
+    </div>
+  </div>
+
+  <!-- Optional: Ensure music plays after user gesture -->
+  <script>
+    window.addEventListener('click', () => {
+      const music = document.getElementById('bg-music');
+      if (music.paused) {
+        music.play();
+      }
+    });
+  </script>
+
+</body>
+</html>
