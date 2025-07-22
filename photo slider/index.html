@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Slideshow</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🔊 Play Music Button -->
+  <div class="play-button-container">
+    <button id="playButton" onclick="startShow()"> Please Click The Button </button>
+  </div>
+
+  <!-- 🎵 Background Music -->
+  <audio id="birthdayMusic" loop>
+    <source src="/Dilijit 1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- 📸 Slideshow -->
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 13</div>
+      <img src="/moon didi 2/1.jpg" alt="Slide 1">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 13</div>
+      <img src="/moon didi 2/2.jpg" alt="Slide 2">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 13</div>
+      <img src="/moon didi 2/3.jpg" alt="Slide 1">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 13</div>
+      <img src="/moon didi 2/4.jpg" alt="Slide 2">
+    </div>  
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 13</div>
+      <img src="/moon didi 2/5.jpg" alt="Slide 1">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 13</div>
+      <img src="/moon didi 2/6.jpg" alt="Slide 2">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 13</div>
+      <img src="/moon didi 2/7.jpg" alt="Slide 1">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 13</div>
+      <img src="/moon didi 2/8.jpg" alt="Slide 2">
+    </div>  
+
+    <div class="mySlides fade">
+      <div class="numbertext">9 / 13</div>
+      <img src="/moon didi 2/9.jpg" alt="Slide 2">
+    </div>  
+
+    <div class="mySlides fade">
+      <div class="numbertext">10 / 13</div>
+      <img src="/moon didi 2/10.jpg" alt="Slide 1">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">11 / 13</div>
+      <img src="/moon didi 2/11.jpg" alt="Slide 2">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">12 / 13</div>
+      <img src="/moon didi 2/12.jpg" alt="Slide 1">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">13 / 13</div>
+      <img src="/moon didi 2/13.jpg" alt="Slide 2">
+    </div>  
+
+
+
+
+
+
+
+
+
+    <!-- Pause Message -->
+    <div class="mySlides fade pause-slide">
+      <div class="pause-text">Fun time (please don't mind)</div>
+    </div>
+
+
+
+
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 16</div>
+      <img src="/moon didi/1.jpg" alt="Slide 4">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 16</div>
+      <img src="/moon didi/2.jpg" alt="Slide 5">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 16</div>
+      <img src="/moon didi/3.jpg" alt="Slide 4">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 16</div>
+      <img src="/moon didi/4.jpg" alt="Slide 5">
+    </div>  
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 16</div>
+      <img src="/moon didi/5.jpg" alt="Slide 4">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">6 / 16</div>
+      <img src="/moon didi/6.jpg" alt="Slide 5">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">7 / 16</div>
+      <img src="/moon didi/7.jpg" alt="Slide 4">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">8 / 16</div>
+      <img src="/moon didi/8.jpg" alt="Slide 5">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">9 / 16</div>
+      <img src="/moon didi/9.jpg" alt="Slide 4">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">10 / 16</div>
+      <img src="/moon didi/10.jpg" alt="Slide 5">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">11 / 16</div>
+      <img src="/moon didi/11.jpg" alt="Slide 4">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">12 / 16</div>
+      <img src="/moon didi/12.jpg" alt="Slide 5">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">13 / 16</div>
+      <img src="/moon didi/13.jpg" alt="Slide 4">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">14 / 16</div>
+      <img src="/moon didi/14.jpg" alt="Slide 5">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">15 / 16</div>
+      <img src="/moon didi/15.jpg" alt="Slide 4">
+    </div>
+   
+    <div class="mySlides fade">
+      <div class="numbertext">16 / 16</div>
+      <img src="/moon didi/16.jpg" alt="Slide 4">
+    </div>
+
+
+
+
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="birthday-button-container">
+      <button id="birthdayButton" onclick="goToNextPage()">🎉 Happy Birthday 🎉</button>
+    </div>
+  </div>
+
+  <!-- Navigation Dots -->
+  <br>
+  <div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
